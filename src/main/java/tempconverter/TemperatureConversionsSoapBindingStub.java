@@ -1,6 +1,6 @@
 /**
  * TemperatureConversionsSoapBindingStub.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -13,14 +13,32 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
     private java.util.Vector cachedSerFactories = new java.util.Vector();
     private java.util.Vector cachedDeserFactories = new java.util.Vector();
 
-    static org.apache.axis.description.OperationDesc [] _operations;
+    static org.apache.axis.description.OperationDesc[] _operations;
 
     static {
         _operations = new org.apache.axis.description.OperationDesc[4];
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    public TemperatureConversionsSoapBindingStub() throws org.apache.axis.AxisFault {
+        this(null);
+    }
+
+    public TemperatureConversionsSoapBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+        this(service);
+        super.cachedEndpoint = endpointURL;
+    }
+
+    public TemperatureConversionsSoapBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+        if (service == null) {
+            super.service = new org.apache.axis.client.Service();
+        } else {
+            super.service = service;
+        }
+        ((org.apache.axis.client.Service) super.service).setTypeMappingVersion("1.1");
+    }
+
+    private static void _initOperationDesc1() {
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -73,24 +91,6 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
 
     }
 
-    public TemperatureConversionsSoapBindingStub() throws org.apache.axis.AxisFault {
-         this(null);
-    }
-
-    public TemperatureConversionsSoapBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
-         this(service);
-         super.cachedEndpoint = endpointURL;
-    }
-
-    public TemperatureConversionsSoapBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
-        if (service == null) {
-            super.service = new org.apache.axis.client.Service();
-        } else {
-            super.service = service;
-        }
-        ((org.apache.axis.client.Service)super.service).setTypeMappingVersion("1.1");
-    }
-
     protected org.apache.axis.client.Call createCall() throws java.rmi.RemoteException {
         try {
             org.apache.axis.client.Call _call = super._createCall();
@@ -118,8 +118,7 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
                 _call.setProperty(key, super.cachedProperties.get(key));
             }
             return _call;
-        }
-        catch (java.lang.Throwable _t) {
+        } catch (java.lang.Throwable _t) {
             throw new org.apache.axis.AxisFault("Failure trying to get the Call object", _t);
         }
     }
@@ -140,22 +139,22 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {nCelsius});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{nCelsius});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.math.BigDecimal) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (java.math.BigDecimal) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public java.math.BigDecimal fahrenheitToCelsius(java.math.BigDecimal nFahrenheit) throws java.rmi.RemoteException {
@@ -174,22 +173,22 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {nFahrenheit});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{nFahrenheit});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.math.BigDecimal) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (java.math.BigDecimal) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public java.math.BigDecimal windChillInCelsius(java.math.BigDecimal nCelsius, java.math.BigDecimal nWindSpeed) throws java.rmi.RemoteException {
@@ -208,22 +207,22 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {nCelsius, nWindSpeed});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{nCelsius, nWindSpeed});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.math.BigDecimal) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (java.math.BigDecimal) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public java.math.BigDecimal windChillInFahrenheit(java.math.BigDecimal nFahrenheit, java.math.BigDecimal nWindSpeed) throws java.rmi.RemoteException {
@@ -242,22 +241,22 @@ public class TemperatureConversionsSoapBindingStub extends org.apache.axis.clien
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {nFahrenheit, nWindSpeed});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{nFahrenheit, nWindSpeed});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.math.BigDecimal) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (java.math.BigDecimal) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (java.math.BigDecimal) org.apache.axis.utils.JavaUtils.convert(_resp, java.math.BigDecimal.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
 }
